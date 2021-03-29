@@ -1,3 +1,5 @@
+Hosted: https://nvgb.vercel.app/
+
 ![Vue.js Logo](https://github.com/vercel/vercel/blob/master/packages/frameworks/logos/vue.svg)
 
 # Vue.js Example
@@ -27,3 +29,7 @@ You can deploy your new Vue.js project with a single command from your terminal 
 ```shell
 $ vercel
 ```
+
+
+Creating a Blog application in the next two weeks
+https://dev.to/vycoder/creating-a-simple-blog-using-vue-with-markdown-2omd
