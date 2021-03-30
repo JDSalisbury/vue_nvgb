@@ -33,3 +33,5 @@ $ vercel
 
 Creating a Blog application in the next two weeks
 https://dev.to/vycoder/creating-a-simple-blog-using-vue-with-markdown-2omd
+
+https://github.com/vycoder/vue-markdown-blog/blob/master/src/views/Home.vue
