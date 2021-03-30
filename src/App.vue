@@ -9,10 +9,11 @@
       >
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-        <v-toolbar-title>Title</v-toolbar-title>
+        <v-toolbar-title>NVGB</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
+        <router-link to="/2021/Flotilla"> Flotilla </router-link>
         <router-link to="/">
           <img style="width: 30%" alt="Vue logo" src="./assets/chicken.png" />
         </router-link>
