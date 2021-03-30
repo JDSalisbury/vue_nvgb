@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from './views/HelloWorld.vue'
-import Foo from './markdown/older/test.md'
-import Blog from './views/Blogs.vue'
-
-import BlogEntries from './static/blogs.json'
+import Home from '../views/HelloWorld'
+import Foo from '../markdown/older/test.md'
+import Blog from '../views/Blogs.vue'
+import BlogEntries from '../static/blogs.json'
 
 
 
@@ -14,12 +13,12 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
     const children = BlogEntries[section].map(child => ({
         path: child.id,
         name: child.id,
-        component: () => import(`./markdown/${section}/${child.id}.md`)
+        component: () => import(`../markdown/${section}/${child.id}.md`)
     }))
     return {
         path: `/${section}`,
         name: section,
-        component: () => import('./views/Blog.vue'),
+        component: () => import('../views/Blog.vue'),
         children
     }
 })
