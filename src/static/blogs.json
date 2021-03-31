@@ -3,16 +3,30 @@
         {
             "id": "Flotilla",
             "date": "March 10, 2019",
-            "title": "Creating a Simple Blog using Vue + Markdown",
-            "description": "Simple and neat way to add a blogging feature to add on your website."
+            "title": "Flotilla In Space",
+            "description": "Dope 3D Turn Based Space Battles.",
+            "author": "Jeff Salisbury",
+            "banner": "https://cdn.cloudflare.steamstatic.com/steam/apps/55000/capsule_616x353.jpg?t=1586734432",
+            "tags": [
+                "PC",
+                "Space",
+                "Turn Based"
+            ]
         }
     ],
     "older": [
         {
             "id": "test",
             "date": "April 21, 2018",
-            "title": "Maud Sparrow and the Four Wicked Horses",
-            "description": "Once upon a time there was a generous girl called Maud Sparrow. She was on the way to see her Albert Connor, when she decided to take a short cut through Spittleton Woods..."
+            "title": "Test Markdown for Testing",
+            "description": "This should be md header info",
+            "author": "Jeff Salisbury",
+            "banner": "https://www.wellplated.com/wp-content/uploads/2019/03/Ultimate-Breakfast-Tacos.jpg",
+            "tags": [
+                "PC",
+                "Space",
+                "Turn Based"
+            ]
         }
     ]
 }
