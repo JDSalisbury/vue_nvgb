@@ -1,31 +1,23 @@
 <template>
   <div id="app">
-    <v-card class="overflow-hidden">
-      <v-app-bar
-        absolute
-        color="white"
-        elevate-on-scroll
-        scroll-target="#scrolling-techniques-7"
-      >
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar color="deep-purple accent-4" dense>
+      <v-toolbar-title>
+        <img
+          style="width: 50%; padding-top: 8px"
+          alt="Blog name"
+          src="./assets/nvgb.png"
+        />
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
 
-        <v-toolbar-title>NVGB</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <router-link to="/2021/Flotilla"> Flotilla </router-link>
-        <router-link to="/">
-          <img style="width: 30%" alt="Vue logo" src="./assets/chicken.png" />
-        </router-link>
-      </v-app-bar>
-      <v-sheet
-        id="scrolling-techniques-7"
-        class="overflow-y-auto"
-        max-height="600"
-      >
-        <v-container style="height: 100px"> </v-container>
-      </v-sheet>
-    </v-card>
+      <router-link to="/">
+        <img
+          style="width: 50px; padding-top: 40px"
+          alt="Vue logo"
+          src="./assets/chicken.png"
+        />
+      </router-link>
+    </v-app-bar>
     <router-view />
   </div>
 </template>
@@ -44,6 +36,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
