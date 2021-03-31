@@ -1,25 +1,39 @@
 <template>
-  <div id="app">
-    <v-app-bar color="deep-purple accent-4" dense>
-      <v-toolbar-title>
+  <v-app>
+    <v-card class="overflow-hidden">
+      <v-app-bar
+        absolute
+        color="white"
+        elevate-on-scroll
+        scroll-target="#scrolling-techniques-7"
+        dense
+      >
         <img
-          style="width: 50%; padding-top: 8px"
+          style="width: 11%; padding-top: 8px"
           alt="Blog name"
           src="./assets/nvgb.png"
         />
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
-      <router-link to="/">
-        <img
-          style="width: 50px; padding-top: 40px"
-          alt="Vue logo"
-          src="./assets/chicken.png"
-        />
-      </router-link>
-    </v-app-bar>
-    <router-view />
-  </div>
+        <router-link to="/">
+          <img
+            style="width: 50px; padding-top: 40px"
+            alt="Vue logo"
+            src="./assets/chicken.png"
+          />
+        </router-link>
+      </v-app-bar>
+      <v-sheet
+        id="scrolling-techniques-7"
+        class="overflow-y-auto"
+        max-height="100vh"
+      >
+        <v-container style="height: 100vh">
+          <router-view />
+        </v-container>
+      </v-sheet>
+    </v-card>
+  </v-app>
 </template>
 
 <script>
