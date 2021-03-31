@@ -9,7 +9,7 @@
         dense
       >
         <img
-          style="width: 11%; padding-top: 8px"
+          style="width: 100px; padding-top: 8px"
           alt="Blog name"
           src="./assets/nvgb.png"
         />
@@ -28,8 +28,19 @@
         class="overflow-y-auto"
         max-height="100vh"
       >
-        <v-container style="height: 100vh">
-          <router-view />
+        <v-container
+          style="
+            height: 100vh;
+            max-width: none !important;
+            padding: 0px !important;
+          "
+        >
+          <router-view style="padding-top: 10px" />
+          <v-footer dark padless>
+            <v-col class="text-center">
+              {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+            </v-col>
+          </v-footer>
         </v-container>
       </v-sheet>
     </v-card>
