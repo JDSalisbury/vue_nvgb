@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/HelloWorld'
+import Home from '../views/Main'
 import Foo from '../markdown/older/test.md'
 import Blog from '../views/Blogs.vue'
 import BlogEntries from '../static/blogs.json'
