@@ -7,6 +7,35 @@
             "description": "Dope 3D Turn Based Space Battles.",
             "author": "Jeff Salisbury",
             "banner": "https://cdn.cloudflare.steamstatic.com/steam/apps/55000/capsule_616x353.jpg?t=1586734432",
+            "type": "blog",
+            "tags": [
+                "PC",
+                "Space",
+                "Turn Based"
+            ]
+        },
+        {
+            "id": "Flotilla",
+            "date": "March 10, 2019",
+            "title": "Flotilla In Space Stream",
+            "description": "Dope 3D Turn Based Space Battles.",
+            "author": "Jeff Salisbury",
+            "banner": "https://cdn.cloudflare.steamstatic.com/steam/apps/55000/capsule_616x353.jpg?t=1586734432",
+            "type": "video",
+            "tags": [
+                "PC",
+                "Space",
+                "Turn Based"
+            ]
+        },
+        {
+            "id": "Flotilla",
+            "date": "March 10, 2019",
+            "title": "Flotilla In Space Podcast",
+            "description": "Dope 3D Turn Based Space Battles.",
+            "author": "Jeff Salisbury",
+            "banner": "https://cdn.cloudflare.steamstatic.com/steam/apps/55000/capsule_616x353.jpg?t=1586734432",
+            "type": "podcast",
             "tags": [
                 "PC",
                 "Space",
@@ -22,6 +51,7 @@
             "description": "This should be md header info",
             "author": "Jeff Salisbury",
             "banner": "https://www.wellplated.com/wp-content/uploads/2019/03/Ultimate-Breakfast-Tacos.jpg",
+            "type": "blog",
             "tags": [
                 "PC",
                 "Space",
