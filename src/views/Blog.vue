@@ -7,6 +7,11 @@
   </div>
 </template>
 
+
+<script>
+export default {};
+</script>
+
 <style>
 .blog {
   min-height: 100vh;
@@ -36,5 +41,8 @@
 
 .back-button {
   margin: 1rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 </style>
