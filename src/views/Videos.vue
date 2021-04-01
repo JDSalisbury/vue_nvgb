@@ -1,10 +1,10 @@
 <template>
-  <BlogList />
+  <BlogList filterField="type" filterValue="video" />
 </template>
 
 <script>
 export default {
-  name: "Main",
+  name: "Videos",
   computed: {},
   components: { BlogList: () => import("@/components/bloglist/BlogList") },
 };
