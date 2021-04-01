@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Main'
-import Foo from '../markdown/older/test.md'
-import Blog from '../views/Blogs.vue'
 import BlogEntries from '../static/blogs.json'
 
 
@@ -24,16 +22,29 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
 })
 
 const routes = [
-    { path: '/', name: 'HelloWorld', component: Home },
-    { path: '/blogs', name: 'Blogs', component: Blog },
-    { path: '/foo', name: 'foo', component: Foo },
+    { path: '/', name: 'Home', component: Home },
     ...blogRoutes
 ];
 
 const router = new VueRouter({
     mode: 'history',
-    base: process.env.BASE_URL,
-    routes
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
+    },
+    routes,
+
+});
+
+router.beforeEach((to, from, next) => {
+
+    window.scrollTo(0, 0);
+
+    // More code ...
+    next();
 });
 
 export default router;
