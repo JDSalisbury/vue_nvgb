@@ -15,6 +15,16 @@
             src="./assets/nvgb.png"
           />
         </router-link>
+
+        <router-link class="nav-link" to="/blogs">
+          <v-btn text> BLOGS </v-btn>
+        </router-link>
+        <router-link class="nav-link" to="/videos">
+          <v-btn text> VIDEOS </v-btn>
+        </router-link>
+        <router-link class="nav-link" to="/podcasts">
+          <v-btn text> PODCASTS </v-btn>
+        </router-link>
         <v-spacer></v-spacer>
 
         <router-link to="/">
@@ -38,11 +48,7 @@
           "
         >
           <router-view style="padding-top: 10px" />
-          <v-footer dark padless>
-            <v-col class="text-center">
-              {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-            </v-col>
-          </v-footer>
+          <Footer />
         </v-container>
       </v-sheet>
     </v-card>
@@ -52,7 +58,7 @@
 <script>
 export default {
   name: "app",
-  components: {},
+  components: { Footer: () => import("@/components/layout/Footer") },
 };
 </script>
 
@@ -60,10 +66,17 @@ export default {
 #app {
   /* Preset colors brazenly stolen from clrs.cc */
   --black: #111;
-  --lime: #01FF70;
+  --lime: #01ff70;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+.nav-link {
+  text-decoration: none;
+  padding: 5px;
+  color: var(--black);
+  font-size: 20px;
+  font-family: cursive;
 }
 </style>

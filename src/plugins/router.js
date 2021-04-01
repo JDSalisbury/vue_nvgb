@@ -2,7 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Main'
 import BlogEntries from '../static/blogs.json'
-
+import goTo from 'vuetify/es5/services/goto'
+import Blogs from '@/views/Blogs'
+import Podcasts from "@/views/Podcasts"
+import Videos from "@/views/Videos"
 
 
 Vue.use(VueRouter)
@@ -23,17 +26,25 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
+    { path: '/blogs', name: 'Blogs', component: Blogs },
+    { path: '/videos', name: 'Videos', component: Videos },
+    { path: '/podcasts', name: 'Podcasts', component: Podcasts },
+
     ...blogRoutes
 ];
 
 const router = new VueRouter({
     mode: 'history',
-    scrollBehavior(to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition
-        } else {
-            return { x: 0, y: 0 }
+    scrollBehavior: (to, from, savedPosition) => {
+        let scrollTo = 0
+
+        if (to.hash) {
+            scrollTo = to.hash
+        } else if (savedPosition) {
+            scrollTo = savedPosition.y
         }
+
+        return goTo(scrollTo)
     },
     routes,
 
