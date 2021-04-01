@@ -7,76 +7,85 @@
         class="group"
       >
         <h2 class="center">{{ section }}</h2>
-        <div class="section" v-for="entry in entries[section]" :key="entry.id">
-          <div class="entry">
-            <h3 @click="$router.push({ name: entry.id })">
-              <img alt="banner-image" :src="entry.banner" />
-              {{ entry.title }}
-              <span class="subtitle">{{ entry.date }}</span>
-            </h3>
-            <p>{{ entry.description }}</p>
-          </div>
-        </div>
+        <section
+          class="entry"
+          :style="`--data-img: url(${entry.banner})`"
+          v-for="entry in entries[section]"
+          :key="entry.id"
+          @click="$router.push({ name: entry.id })"
+        >
+          <span class="title bubbly-text">{{ entry.title }}</span>
+          <span class="date bubbly-text">{{ entry.date }}</span>
+          <span class="subtitle bubbly-text">{{ entry.description }}</span>
+        </section>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BLOGENTRIES from "@/static/blogs.json";
+import BLOG_ENTRIES from "@/static/blogs.json";
 
 export default {
   name: "HelloWorld",
   computed: {
     entries() {
-      return BLOGENTRIES;
+      return BLOG_ENTRIES;
     },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .center {
   text-align: center;
 }
-.headline {
-  text-transform: uppercase;
-  margin: 4rem auto;
-  font-size: 4rem;
-}
-img {
-  display: block;
-  margin: 0 auto;
-  width: 510px;
-}
-h2 {
-  color: #35495e;
-  text-transform: capitalize;
-  margin-bottom: 2rem;
-}
-h3 {
-  color: #42b883;
-  margin-bottom: 0;
+
+.entry {
   cursor: pointer;
+  background-image: var(--data-img);
+  background-size: cover;
+  min-width: 25rem;
+  min-height: 25rem;
+  position: relative;
 }
+
+.bubbly-text {
+  border-radius: 3px;
+  padding: 0 0.5rem;
+}
+
+.title {
+  color: #42b883;
+  background: var(--black);
+  position: absolute;
+  left: 10%;
+  bottom: 3rem;
+}
+
 .subtitle {
-  color: grey;
-  font-size: 0.98rem;
-  float: right;
+  color: white;
+  background: var(--black);
+  position: absolute;
+  left: 10%;
+  bottom: 1rem;
+}
+
+.date {
+  color: var(--black);
   font-weight: normal;
+  position: absolute;
+  background: var(--lime);
+  right: 5%;
+  bottom: 2%;
 }
-p {
-  margin-top: 0.4rem;
-}
+
 .sections {
   max-width: 40vw;
   margin: 0 auto;
   margin-top: 4rem;
 }
-.section {
-  margin-bottom: 3rem;
-}
+
 .group {
   margin-bottom: 4rem;
 }

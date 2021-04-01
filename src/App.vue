@@ -8,11 +8,13 @@
         scroll-target="#scrolling-techniques-7"
         dense
       >
-        <img
-          style="width: 100px; padding-top: 8px"
-          alt="Blog name"
-          src="./assets/nvgb.png"
-        />
+        <router-link to="/">
+          <img
+            style="width: 100px; padding-top: 8px"
+            alt="Blog name"
+            src="./assets/nvgb.png"
+          />
+        </router-link>
         <v-spacer></v-spacer>
 
         <router-link to="/">
@@ -54,16 +56,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
+  /* Preset colors brazenly stolen from clrs.cc */
+  --black: #111;
+  --lime: #01FF70;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-
-.blog {
-  min-height: 100vh;
 }
 </style>
